@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      html {
+        height: 100%;
+      }
+      body {
+        min-height: 100%;
+        position: relative;
+        padding-bottom: 50px;
+      }
+      footer {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 50px;
+        line-height: 50px;
+        padding-left: 25px;
+        background: white;
+      }
+      body {
+        background: #eee;
+        margin: 0;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: #555;
+      }
+      .container {
+        margin: 0 auto;
+        max-width: 700px;
+      }
+      header {
+        background: white;
+        text-align: center;
+        height: 100px;
+        font-size: 24pt;
+        color: #666;
+        display: table-cell;
+        vertical-align: middle;
+      }
+      .option {
+        border-radius: 5px;
+        border: 1px solid #777;
+        background: #fafafa;
+        height: 50px;
+        line-height: 50px;
+        margin-bottom: 25px;
+      }
+      .option:hover {
+        background: white;
+        cursor: pointer;
+        box-shadow: 0 3px 5px #ccc;
+      }
+      .option .checkbox {
+        border-radius: 2px;
+        border: 1px solid #777;
+        height: 25px;
+        width: 25px;
+        margin: 13px;
+        margin-left: 25px;
+        margin-right: 25px;
+        box-sizing: border-box;
+        float: left;
+      }
+      .option .checkbox div {
+        border-radius: 2px;
+        background: #777;
+        height: 15px;
+        width: 15px;
+        margin: 4px;
+        box-sizing: border-box;
+        display: none;
+      }
+      .option.selected .checkbox div {
+        display: block;
+      }
+      .option:hover:not(.selected) .checkbox div {
+        background: #eee;
+        display: block;
+      }
+      .option .title {
+        float: left;
+      }
+      .option .count {
+        float: right;
+        font-weight: bold;
+        margin-right: 25px;
+      }
+      .option input {
+        box-sizing: border-box;
+        border: 0;
+        height: 100%;
+        padding: 0 15px;
+        margin: 0;
+        display: block;
+        border-radius: 0;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        float: left;
+        width: 80%;
+        background: none;
+      }
+      .option button {
+        float: right;
+        font-weight: bold;
+        opacity: 0.6;
+        background: #ccc;
+        color: black;
+        padding: 6px 12px;
+        border: 0;
+        cursor: pointer;
+        height: 50%;
+        margin: 12px;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container" style=" padding-top: 100px; ">
+      <div style="display: table; width: 100%;margin-bottom: 50px;">
+        <header>What tech stack should we use?</header>
+      </div>
+
+      <div class="option">
+        <div class="checkbox">
+          <div></div>
+        </div>
+        <div class="title">Web: TypeScript/HTML</div>
+        <div class="count">77</div>
+      </div>
+
+      <div class="option selected">
+        <div class="checkbox">
+          <div></div>
+        </div>
+        <div class="title">Web: TypeScript/HTML</div>
+        <div class="count">7</div>
+      </div>
+
+      <div class="option">
+        <div class="checkbox">
+          <div></div>
+        </div>
+        <div class="title">Web: TypeScript/HTML</div>
+        <div class="count">0</div>
+      </div>
+
+      <div class="option" style="position: relative;">
+        <button style="position: absolute; right: 0px;">add</button>
+        <input type="text" placeholder="Add new option ..." style="width:100%;" />
+      </div>
+    </div>
+    <footer>Create a new poll</footer>
+  </body>
+</html>
